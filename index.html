@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de: Pedro Herrera Riveros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 20px 40px;
+            color: white;
+            background-color: #28a745;
+            border-radius: 5px;
+            font-size: 60px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: rgb(63, 63, 63);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .modal .button {
+            margin-top: 20px;
+        }
+
+        img {
+            margin: 20px 0;
+            width: 100px; /* Ajusta el tamaño según tus necesidades */
+        }
+    </style>
+    
+</head>
+<body>
+    <audio id="abrelafotoaudio"> <source src="Ábre-la-fóto-que-qui.mp3" type="audio/mpeg"></audio>
+    
+    <audio id="abrelacarpeta"> <source src="Ábre-la-carpéta-que-.mp3" type="audio/mpeg"></audio>
+     
+    <audio id="haceclickderechoenlafoto"> <source src="Háce-click-derecho-e.mp3" type="audio/mpeg"></audio>
+    
+    <audio id="haceclickizquierdoencompartir"> <source src="Háce-click-izquiérdo.mp3" type="audio/mpeg"></audio>
+    
+    <audio id="pinchaguasap"> <source src="Píncha-guasap.mp3" type="audio/mpeg"></audio>
+       
+    <audio id="pinchaunaves"> <source src="Píncha-úna-vés-a-qui.mp3" type="audio/mpeg"></audio>
+       
+
+   
+    <div id="openz" class="modal" style="height: 100%;">
+        <div class="modal-content" style="height: 100%;">
+            <p style="color: white;"> ABRE LA CARPETA QUE ESTA ABAJO EN LA PANTALLA</p>
+            <img style="width: 100%;" src="https://cdn-icons-png.freepik.com/512/11892/11892503.png" alt="Logo de WhatsApp">
+            <button class="button" onclick="openz()">Listo</button>
+        </div>
+    </div>
+<br>
+
+    <div class="container">
+      <h3 style="margin-top: -100px;">Perfil de: Pedro Herrera Riveros</h3>
+      <br><br><br>    
+        <h2>Conecta la memoria al computador</h2>
+        <img style="width: 100%;" src="https://www.movilzona.es/app/uploads-movilzona.es/2023/08/pendrive-movil.jpg">
+        <button class="button" onclick="openModal()">Listo</button>
+    </div>
+    
+
+    <div id="abrelafoto" class="modal" style="height: 100%;">
+        <div class="modal-content" style="height: 100%;">
+            <p style="color: white;"> ABRE LA FOTO QUE QUIERES MANDAR</p>
+            <img style="width: 100%;" src="https://victoriaredondo.com/wp-content/uploads/2015/09/empleabilidad-empleo-importancia-de-la-foto-imagen-profesional.jpg" alt="Logo de WhatsApp">
+            <button class="button" onclick="open1()">Listo</button>
+        </div>
+    </div>
+
+
+
+    <div id="HACEclickderecho" class="modal" style="height: 100%;">
+        <div class="modal-content" style="height: 100%;">
+            <p style="color: white;"> HACE CLICK DERECHO EN LA FOTO</p>
+            <img style="width: 100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfiRgJS6QCdAmq6KjiEtVb-sbDEJVFPORrEA&s" alt="Logo de WhatsApp">
+            <button class="button" onclick="open2()">Listo</button>
+        </div>
+    </div>
+
+    
+    <div id="clickencompartir" class="modal" style="height: 100%;">
+        <div class="modal-content" style="height: 100%;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSybiYrwthC0SpFOIu6_aBevcto6uHFnPGVyw&s" alt="">
+            <p style="color: white;"> HACE CLICK IZQUIERDO EN COMPARTIR</p>
+            <img style="width: 100%;" src="https://i.ibb.co/RT53QbC/descargar.png" alt="Logo de WhatsApp">
+            <button class="button" onclick="open3()">Listo</button>
+        </div>
+    </div>
+
+    <div id="abrewhatsapp" class="modal" style="height: 100%;">
+        <div class="modal-content" style="height: 100%;">
+            <p style="color: white;">PINCHA WHATSAPP EN EL COMPUTADOR</p>
+            <img style="width: 100%;" src="https://img.lovepik.com/png/20230927/whatsapp-icon-logo-whatsapp-icons-logo-icons_2399_wh860.png" alt="Logo de WhatsApp">
+            <button class="button" style="background: red;" onclick="open3()">Repetir</button>
+            <button class="button" onclick="lito()">MANDAR OTRA FOTO</button>
+     
+        </div>
+    </div>
+    <script>
+
+function lito(){
+    location.reload();
+}
+
+
+        function openModal() {
+            document.getElementById('openz').style.display = 'flex';
+            var audio = document.getElementById('abrelacarpeta'); abrelacarpeta.play(); 
+        }
+
+        function openz() {
+            document.getElementById('abrelafoto').style.display = 'flex';
+            var audio = document.getElementById('abrelafotoaudio'); abrelafotoaudio.play(); 
+        }
+
+
+        function open1() {
+            document.getElementById('HACEclickderecho').style.display = 'flex';
+            var audio = document.getElementById('haceclickderechoenlafoto'); haceclickderechoenlafoto.play(); 
+       
+        }
+        
+
+        function open2() {
+            document.getElementById('clickencompartir').style.display = 'flex';
+            var audio = document.getElementById('haceclickizquierdoencompartir'); haceclickizquierdoencompartir.play(); 
+       
+        }
+
+        function open3() {
+            document.getElementById('abrewhatsapp').style.display = 'flex';
+            var audio = document.getElementById('pinchaunaves'); pinchaunaves.play(); 
+        }
+    </script>
+</body>
+</html>
